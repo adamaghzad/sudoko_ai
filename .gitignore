@@ -16,7 +16,7 @@ dist/
 build/
 .eggs/
 
-# Next.js
+# Next.js build output & cache
 frontend/.next/
 frontend/out/
 
@@ -39,9 +39,15 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# ML / Data
-*.h5
-*.pkl
+# ML model weights (large binaries)
 *.pt
 *.pth
-__pycache__/
+*.h5
+*.pkl
+*.ckpt
+
+# Large data files
+*.npz
+*.npy
+backend/data/MNIST/
+notebooks/data/
