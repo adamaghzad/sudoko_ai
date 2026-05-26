@@ -1,0 +1,52 @@
+{
+  "cleaning": {
+    "solution incompl\u00e8te": 0,
+    "valeurs hors plage": 0,
+    "incoh\u00e9rence puzzle/solution": 0,
+    "doublons": 0,
+    "solution Sudoku invalide": 0
+  },
+  "splits": {
+    "train": {
+      "size": 11497,
+      "clues_mean": 30.530399234582934,
+      "clues_std": 3.4486456691232177,
+      "clues_min": 25,
+      "clues_max": 36,
+      "difficulty": {
+        "easy": 968,
+        "medium": 7665,
+        "hard": 2864,
+        "expert": 0
+      }
+    },
+    "val": {
+      "size": 1437,
+      "clues_mean": 30.48295059151009,
+      "clues_std": 3.4506998361816117,
+      "clues_min": 25,
+      "clues_max": 36,
+      "difficulty": {
+        "easy": 121,
+        "medium": 958,
+        "hard": 358,
+        "expert": 0
+      }
+    },
+    "test": {
+      "size": 1440,
+      "clues_mean": 30.554166666666667,
+      "clues_std": 3.489246874326894,
+      "clues_min": 25,
+      "clues_max": 36,
+      "difficulty": {
+        "easy": 122,
+        "medium": 959,
+        "hard": 359,
+        "expert": 0
+      }
+    }
+  },
+  "source": "generated",
+  "aug_factor": 1
+}
