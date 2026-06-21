@@ -98,14 +98,18 @@ Evaluation provides instantaneous feedback on:
 - **Mean Confidence**: Global softmax certainty.
 - **Empty Cells Min/Max**: Localization of the model's structural hesitation.
 
-*Currently observed real-time inference comparisons (CPU):*
-| Model | Inference Time | Mean Confidence | Notes |
+The following values reflect the latest evaluation metrics found in the local generated artifacts (`backend/weights/*_history.json`):
+
+| Model | Best Validation Loss | Cell Accuracy | Puzzle Accuracy |
 | :--- | :--- | :--- | :--- |
-| **MLP** | ~38 ms | ~21% | Low precision, fast execution |
-| **CNN** | ~106 ms | ~65% | High spatial structure awareness |
-| **RNN** | ~160 ms | ~50% | Suffers from sequence memory decay |
-| **LSTM** | ~121 ms | ~49% | Strong correlation logic due to gates |
-| **GRU** | ~65 ms | ~50% | Efficient recurrent computational fallback |
+| **MLP** | 1.6684 | 39.40% | 0.00% |
+| **RNN** | 0.4105 | 82.93% | 0.00% |
+| **GRU** | 0.4133 | 81.81% | 0.00% |
+| **LSTM** | 0.4338 | 80.21% | 0.00% |
+| **CNN 2D** | 0.2392 | 90.14% | 0.09% |
+| **Hybrid** | **0.1236** | **95.47%** | **7.39%** |
+
+*(Note: "Cell Accuracy" measures the model's precision on individual grid positions, while "Puzzle Accuracy" requires all 81 cells to be strictly correct. The protocol winner is the Hybrid CNN-LSTM architecture based on the lowest validation loss and highest accuracy).*
 
 ---
 *This repository is an academic demonstration in Deep Learning. Model feature maps describe learned heuristics and should not be confused with deterministic solver paths.*
